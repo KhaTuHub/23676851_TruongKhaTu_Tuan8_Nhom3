@@ -5,7 +5,7 @@ interface Props {
   value: number;
   size?: number;
   max?: number;
-  onChange?: (value: number) => void; // có -> bấm được
+  onChange?: (value: number) => void; 
 }
 
 export default function RatingStars({ value, size = 20, max = 5, onChange }: Props) {
@@ -14,7 +14,7 @@ export default function RatingStars({ value, size = 20, max = 5, onChange }: Pro
   return (
     <View style={{ flexDirection: 'row' }}>
       {stars.map((n) => {
-        const fill = Math.max(0, Math.min(1, value - (n - 1))) * 100; // % tô của sao n
+        const fill = Math.max(0, Math.min(1, value - (n - 1))) * 100; 
 
         const star = (
           <View style={{ width: size, height: size }}>

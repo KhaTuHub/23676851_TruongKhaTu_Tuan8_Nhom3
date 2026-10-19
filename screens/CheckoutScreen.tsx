@@ -16,7 +16,7 @@ export default function CheckoutScreen({ navigation }: Props) {
     }
   }, [token, navigation]);
 
-  if (!token) return null; // chưa đăng nhập thì không render nội dung
+  if (!token) return null; 
 
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>

@@ -8,8 +8,7 @@ interface Props {
 }
 
 export default function RelatedBooks({ books, onPressBook }: Props) {
-  if (books.length === 0) return null; // không có sách liên quan thì ẩn cả mục
-
+  if (books.length === 0) return null; 
   return (
     <View style={styles.wrap}>
       <Text style={styles.title}>Sách liên quan</Text>

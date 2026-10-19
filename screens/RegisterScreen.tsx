@@ -50,7 +50,7 @@ export default function RegisterScreen({ navigation, route }: Props) {
         password: form.password,
       });
       await setAuth(data);
-      goAfterAuth(); // Checkout / BookDetail / Home tùy redirectTo
+      goAfterAuth(); 
     } catch (err) {
       Alert.alert('Đăng ký thất bại', getErrorMessage(err));
     } finally {

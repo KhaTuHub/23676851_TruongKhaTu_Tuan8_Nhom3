@@ -21,7 +21,7 @@ export default function ReviewForm({ onSubmit }: Props) {
     try {
       setLoading(true);
       await onSubmit({ rating, comment: comment.trim() });
-      setRating(0); // xoá form sau khi gửi thành công
+      setRating(0); 
       setComment('');
     } catch {
       setError('Gửi đánh giá thất bại, vui lòng thử lại');

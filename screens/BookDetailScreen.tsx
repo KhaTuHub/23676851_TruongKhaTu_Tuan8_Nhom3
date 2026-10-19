@@ -38,7 +38,7 @@ export default function BookDetailScreen({ route, navigation }: Props) {
 
   const average = useMemo(() => calcAverage(reviews), [reviews]);
 
-  // (1) Thêm: sách cùng danh mục, trừ sách hiện tại
+  
   const related = useMemo(() => getRelatedBooks(BOOKS, book), [book]);
 
   const handleSubmitReview = async ({ rating, comment }: { rating: number; comment: string }) => {
@@ -80,7 +80,7 @@ export default function BookDetailScreen({ route, navigation }: Props) {
         </TouchableOpacity>
       )}
 
-      {/* (2) Thêm: hàng ngang Sách liên quan ở cuối trang */}
+     
       <RelatedBooks
         books={related}
         onPressBook={(b) => navigation.push('BookDetail', { book: b })}

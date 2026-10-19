@@ -11,7 +11,7 @@ const isTokenValid = (token: string | null | undefined): boolean => {
     const { exp } = jwtDecode<{ exp?: number }>(token);
     return !exp || exp * 1000 > Date.now();
   } catch {
-    return true; // không phải JWT -> không kiểm tra hạn được
+    return true; 
   }
 };
 
@@ -47,7 +47,7 @@ export const useAuthStore = create<AuthState>((set) => ({
         if (isTokenValid(saved.token)) {
           set({ token: saved.token, user: saved.user });
         } else {
-          await AsyncStorage.removeItem(STORAGE_KEY); // hết hạn -> dọn
+          await AsyncStorage.removeItem(STORAGE_KEY); 
         }
       }
     } catch {

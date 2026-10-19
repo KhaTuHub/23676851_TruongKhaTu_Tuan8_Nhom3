@@ -42,7 +42,7 @@ export default function LoginScreen({ navigation, route }: Props) {
       setLoading(true);
       const data = await authService.login(form.email.trim(), form.password);
       await setAuth(data);
-      goAfterAuth(); // Checkout / BookDetail / Home tùy redirectTo
+      goAfterAuth(); 
     } catch (err) {
       Alert.alert('Đăng nhập thất bại', getErrorMessage(err));
     } finally {

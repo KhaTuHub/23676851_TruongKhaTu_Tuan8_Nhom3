@@ -29,7 +29,7 @@ export type RedirectTarget = 'Checkout' | 'BookDetail';
 
 export interface AuthRedirectParams {
   redirectTo?: RedirectTarget;
-  book?: Book; // dùng khi redirectTo = 'BookDetail'
+  book?: Book; 
 }
 
 export type RootStackParamList = {

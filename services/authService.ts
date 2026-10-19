@@ -39,7 +39,7 @@ export const authService = {
   },
 };
 
-// Lấy thông báo lỗi từ server (nếu có)
+
 export const getErrorMessage = (err: unknown): string => {
   if (axios.isAxiosError(err)) {
     return (err.response?.data as { message?: string } | undefined)?.message

@@ -11,7 +11,7 @@ export default function CartScreen({ navigation }: Props) {
 
   const onCheckout = () => {
     if (!token) {
-      // chưa đăng nhập -> sang Login, kèm màn cần quay lại
+      
       navigation.navigate('Login', { redirectTo: 'Checkout' });
       return;
     }
